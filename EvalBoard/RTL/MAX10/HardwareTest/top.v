@@ -3,6 +3,7 @@ module top
     input   clk,
     input   rst,
     input   enable,
+    output  trigger,
     output  [7:0] LEDs
 );
 
@@ -17,37 +18,45 @@ reg [24:0]  div_count;
 assign LEDs = ~{count, count};
 
 // Use a clock divider to being the 50 MHz clock downto 1 Hz
-always @ (posedge clk)
-begin
-    if(rst) begin
-        div_clk     <= 1'b0;
-        div_count   <= 25'h0;
-    end
-    else begin
-        if (div_count == 25'h17D7840) begin
-            div_clk     <= ~div_clk;
-            div_count   <= 25'h0;
-        end
-        else begin
-            div_count   <= div_count + 1;
-        end
-    end
-end
-
-// Incrementing 4-bit counter
-counter counter_i
-    (
-        .clk(div_clk),
-        .en(enable),
-        .rst(rst),
-        .out(count)
-    );
+//always @ (posedge clk)
+//begin
+//    if(rst) begin
+//        div_clk     <= 1'b0;
+//        div_count   <= 25'h0;
+//    end
+//    else begin
+//        if (div_count == 25'h17D7840) begin
+//            div_clk     <= ~div_clk;
+//            div_count   <= 25'h0;
+//        end
+//        else begin
+//            div_count   <= div_count + 1;
+//        end
+//    end
+//end
+//
+//// Incrementing 4-bit counter
+//counter counter_i
+//    (
+//        .clk(div_clk),
+//        .en(enable),
+//        .rst(rst),
+//        .out(count)
+//    );
 
 // We need something to run to see if we can capture the trace.
-mul mul_i
+//mul mul_i
+//    (
+//        .clk_o(clk),
+//        .rst(rst)
+//    );
+
+des des_i
     (
-        .clk_o(clk),
-        .rst(rst)
+        .clk_in(clk),
+        .rst(rst),
+        .enable(enable),
+        .trigger(trigger)
     );
 
 endmodule

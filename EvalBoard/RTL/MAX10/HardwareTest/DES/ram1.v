@@ -4,7 +4,7 @@
 // MODULE: altsyncram 
 
 // ============================================================
-// File Name: ram64.v
+// File Name: ram1.v
 // Megafunction Name(s):
 // 			altsyncram
 //
@@ -37,7 +37,7 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
-module ram64 (
+module ram1 (
 	address,
 	clock,
 	data,
@@ -88,7 +88,7 @@ module ram64 (
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
 		altsyncram_component.intended_device_family = "MAX 10",
-		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=MUL",
+		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=DES",
 		altsyncram_component.lpm_type = "altsyncram",
 		altsyncram_component.numwords_a = 32,
 		altsyncram_component.operation_mode = "SINGLE_PORT",
@@ -123,7 +123,7 @@ endmodule
 // Retrieval info: PRIVATE: INIT_TO_SIM_X NUMERIC "0"
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "MAX 10"
 // Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "1"
-// Retrieval info: PRIVATE: JTAG_ID STRING "MUL"
+// Retrieval info: PRIVATE: JTAG_ID STRING "DES"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
 // Retrieval info: PRIVATE: MIFfilename STRING ""
 // Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "32"
@@ -143,7 +143,7 @@ endmodule
 // Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "BYPASS"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "MAX 10"
-// Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=MUL"
+// Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=DES"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
 // Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "32"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "SINGLE_PORT"
@@ -164,10 +164,10 @@ endmodule
 // Retrieval info: CONNECT: @data_a 0 0 64 0 data 0 0 64 0
 // Retrieval info: CONNECT: @wren_a 0 0 0 0 wren 0 0 0 0
 // Retrieval info: CONNECT: q 0 0 64 0 @q_a 0 0 64 0
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram64.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram64.inc FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram64.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram64.bsf FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram64_inst.v FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram64_bb.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ram1.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ram1.inc FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ram1.cmp FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ram1.bsf FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ram1_inst.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ram1_bb.v FALSE
 // Retrieval info: LIB_FILE: altera_mf
