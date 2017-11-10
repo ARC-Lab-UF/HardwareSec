@@ -6,7 +6,7 @@
 module des_round_function
     (
         input   [1:32] R, // 32-bit right-half input
-        input   [1:48] K, // 48-bit round subkey
+        input   [1:48] K, // 48-bit round key
         output  [1:32] P  // 32-bit output permutation
     );
 
